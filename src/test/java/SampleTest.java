@@ -10,7 +10,6 @@ public class SampleTest {
         System.setProperty("webdriver.chrome.driver", filepath);
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.saucedemo.com/");
-
         driver.findElement(By.cssSelector("#user-name")).sendKeys("standard_user");
         driver.findElement(By.cssSelector("#password")).sendKeys("secret_sauce");
         driver.findElement(By.cssSelector("#login-button")).click();

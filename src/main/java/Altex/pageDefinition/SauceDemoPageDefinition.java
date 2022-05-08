@@ -1,12 +1,20 @@
 package Altex.pageDefinition;
-import Altex.pages.SauceDemoPage;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
 
 public class SauceDemoPageDefinition {
-    SauceDemoPage sdp;
-    public void insertUserName( String key)
+    public WebDriver driver;
+    public SauceDemoPageDefinition(WebDriver driver)
     {
-        this.sdp.userNameField.sendKeys(key);
+        this.driver = driver;
+        PageFactory.initElements(driver, this);
+
+    }
+
+    public void insertUserName(WebElement userNameField, String key)
+    {
+        userNameField.sendKeys(key);
     }
 
     public void insertPassword(WebElement passwordField, String key)

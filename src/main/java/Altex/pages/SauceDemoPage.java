@@ -1,13 +1,19 @@
 package Altex.pages;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class SauceDemoPage {
-    public WebDriver webDriver;
-    public WebElement userNameField = webDriver.findElement(By.cssSelector("#user-name"));
+    public WebDriver driver;
+
+    public SauceDemoPage(WebDriver driver)
+    {
+        this.driver = driver;
+        PageFactory.initElements(driver, this);
+    }
+    @FindBy(css = "#user-name")
+    public WebElement userNameField;
 
     @FindBy(css = "#password")
     public WebElement passwordField;
@@ -24,7 +30,7 @@ public class SauceDemoPage {
     @FindBy(id = "checkout")
     public WebElement checkoutBtn;
 
-    @FindBy(css = "#first_name")
+    @FindBy(css = "#first-name")
     public WebElement firstNameField;
 
     @FindBy(id = "last-name")
@@ -42,7 +48,4 @@ public class SauceDemoPage {
     @FindBy(id = "back-to-products")
     public WebElement backToProductsBtn;
 
-    public SauceDemoPage(WebDriver webDriver) {
-        this.webDriver = webDriver;
-    }
 }
