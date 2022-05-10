@@ -1,17 +1,10 @@
 package Altex.pages;
-import org.openqa.selenium.WebDriver;
+import Altex.driver.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
-public class SauceDemoPage {
-    public WebDriver driver;
+public class SauceDemoPage extends Driver {
 
-    public SauceDemoPage(WebDriver driver)
-    {
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
-    }
     @FindBy(css = "#user-name")
     public WebElement userNameField;
 

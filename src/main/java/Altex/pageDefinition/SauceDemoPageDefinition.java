@@ -1,75 +1,37 @@
 package Altex.pageDefinition;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import Altex.driver.Driver;
+import Altex.pages.SauceDemoPage;
 import org.openqa.selenium.support.PageFactory;
 
-public class SauceDemoPageDefinition {
-    public WebDriver driver;
-    public SauceDemoPageDefinition(WebDriver driver)
+public class SauceDemoPageDefinition extends Driver {
+    SauceDemoPage sdp = PageFactory.initElements(driver, SauceDemoPage.class);
+
+    public void loginPage(String username, String password)
     {
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
+        sdp.userNameField.sendKeys(username);
+        sdp.passwordField.sendKeys(password);
+        sdp.loginButton.click();
 
     }
 
-    public void insertUserName(WebElement userNameField, String key)
-    {
-        userNameField.sendKeys(key);
+    public void addProductAndViewCart(){
+        sdp.addToCartTShirtBtn.click();
+        sdp.viewCartBtn.click();
     }
 
-    public void insertPassword(WebElement passwordField, String key)
+    public void placeOrder(String first_name, String last_name, String postal_code)
     {
-        passwordField.sendKeys(key);
+        sdp.checkoutBtn.click();
+        sdp.firstNameField.sendKeys(first_name);
+        sdp.lastNameField.sendKeys(last_name);
+        sdp.postalCodeField.sendKeys(postal_code);
+        sdp.continueBtn.click();
+        sdp.finishBtn.click();
     }
 
-    public void pressLoginButton(WebElement loginButton)
+    public void pressBackToProducts()
     {
-        loginButton.click();
-    }
-
-    public void pressAddToCartTShirt(WebElement addToCartTShirtBtn)
-    {
-        addToCartTShirtBtn.click();
-    }
-
-    public void pressViewCart(WebElement viewCartBtn)
-    {
-        viewCartBtn.click();
-    }
-
-    public void pressCheckout(WebElement checkoutBtn)
-    {
-        checkoutBtn.click();
-    }
-
-    public void insertFirstNameForOrder(WebElement firstNameField, String key)
-    {
-        firstNameField.sendKeys(key);
-    }
-
-    public void insertLastNameForOrder(WebElement lastNameField, String key)
-    {
-        lastNameField.sendKeys(key);
-    }
-
-    public void insertPostalCodeForOrder(WebElement postalCodeField, String key)
-    {
-        postalCodeField.sendKeys(key);
-    }
-
-    public void pressContinue(WebElement continueBtn)
-    {
-        continueBtn.click();
-    }
-
-    public void pressFinish(WebElement finishBtn)
-    {
-        finishBtn.click();
-    }
-
-    public void pressBackToProducts(WebElement backToProductsBtn)
-    {
-        backToProductsBtn.click();
+        sdp.backToProductsBtn.click();
     }
 }
 
