@@ -1,9 +1,8 @@
 package Altex.pages;
-import Altex.driver.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class SauceDemoPage extends Driver {
+public class SauceDemoPage{
 
     @FindBy(css = "#user-name")
     public WebElement userNameField;
@@ -14,8 +13,8 @@ public class SauceDemoPage extends Driver {
     @FindBy(css = "#login-button")
     public WebElement loginButton;
 
-    @FindBy(name = "add-to-cart-sauce-labs-bolt-t-shirt")
-    public WebElement addToCartTShirtBtn;
+    @FindBy()
+    public WebElement addToCartArticle;
 
     @FindBy(className = "shopping_cart_link")
     public WebElement viewCartBtn;
@@ -41,4 +40,19 @@ public class SauceDemoPage extends Driver {
     @FindBy(id = "back-to-products")
     public WebElement backToProductsBtn;
 
+    @FindBy(id = "react-burger-menu-btn")
+    public WebElement openMenuButtonInMainPage;
+
+    @FindBy(id = "shopping_cart_container")
+    public WebElement cartButtonInMainPage;
+
+    @FindBy(className = "title")
+    public WebElement cartPageTitle;
+
+    @FindBy()
+    public WebElement removeItem;
+
+    @FindBy(className = "complete-header")
+    public WebElement sentOrderMessage;
 }
+
