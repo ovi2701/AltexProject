@@ -18,11 +18,13 @@ import org.testng.annotations.Test;
 
 public class TestSauceDemoPage extends Driver {
     String username, password, first_name, last_name, postal_code;
+    SauceDemoPageDefinition sdpd;
 
     @BeforeTest
     public void setup() {
         driver = Driver.setDriver();
         initializeDataFromJSON();
+        sdpd = new SauceDemoPageDefinition();
     }
 
     public void initializeDataFromJSON() {
@@ -47,7 +49,6 @@ public class TestSauceDemoPage extends Driver {
 
     @Test()
     public void TestLogin() throws IOException {
-        SauceDemoPageDefinition sdpd = new SauceDemoPageDefinition();
         sdpd.loginPage(username, password);
         TakeScreenShot();
         sdpd.checkIfLoginWorks();
@@ -56,7 +57,6 @@ public class TestSauceDemoPage extends Driver {
 
     @Test(priority = 1)
     public void TestAddingProductsAndViewCart() throws IOException {
-        SauceDemoPageDefinition sdpd = new SauceDemoPageDefinition();
         sdpd.addProductsAndViewCart();
         TakeScreenShot();
         sdpd.checkIfAddProductAndViewCartPageFunctionalityWorks();
@@ -64,7 +64,6 @@ public class TestSauceDemoPage extends Driver {
 
     @Test(priority = 2)
     public void TestPlaceOrder() throws IOException {
-        SauceDemoPageDefinition sdpd = new SauceDemoPageDefinition();
         sdpd.placeOrder(first_name, last_name, postal_code);
         TakeScreenShot();
         sdpd.checkIfOrderSent();
