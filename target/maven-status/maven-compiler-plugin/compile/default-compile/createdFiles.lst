@@ -1,0 +1,7 @@
+Altex\tests\TestSauceDemoPage.class
+Altex\pageDefinition\SauceDemoPageDefinition.class
+Altex\driver\Driver.class
+Altex\Model\TestData.class
+EncodingJSONValues.class
+Altex\pages\SauceDemoPage.class
+Altex\config\Log4jConfig.class
