@@ -1,17 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-05-19T11:38:40 EEST" name="Surefire suite" finished-at="2022-05-19T11:38:52 EEST" duration-ms="12244">
+  <suite started-at="2022-05-20T09:15:17 EEST" name="Suite" finished-at="2022-05-20T09:15:35 EEST" duration-ms="17437">
     <groups>
     </groups>
-    <test started-at="2022-05-19T11:38:40 EEST" name="Surefire test" finished-at="2022-05-19T11:38:52 EEST" duration-ms="12244">
-      <class name="SampleTest">
-        <test-method signature="Test1()[pri:0, instance:SampleTest@37574691]" started-at="2022-05-19T11:38:40 EEST" name="Test1" finished-at="2022-05-19T11:38:52 EEST" duration-ms="12216" status="PASS">
+    <test started-at="2022-05-20T09:15:17 EEST" name="Test" finished-at="2022-05-20T09:15:35 EEST" duration-ms="17437">
+      <class name="Altex.tests.TestSauceDemoPage">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Altex.tests.TestSauceDemoPage@6156496]" started-at="2022-05-20T09:15:17 EEST" name="setup" finished-at="2022-05-20T09:15:23 EEST" duration-ms="6086" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Test1 -->
-      </class> <!-- SampleTest -->
-    </test> <!-- Surefire test -->
-  </suite> <!-- Surefire suite -->
+        </test-method> <!-- setup -->
+        <test-method signature="TestLogin()[pri:0, instance:Altex.tests.TestSauceDemoPage@6156496]" started-at="2022-05-20T09:15:23 EEST" name="TestLogin" finished-at="2022-05-20T09:15:28 EEST" duration-ms="4644" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestLogin -->
+        <test-method signature="TestAddingProductsAndViewCart()[pri:1, instance:Altex.tests.TestSauceDemoPage@6156496]" started-at="2022-05-20T09:15:28 EEST" name="TestAddingProductsAndViewCart" finished-at="2022-05-20T09:15:31 EEST" duration-ms="2893" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestAddingProductsAndViewCart -->
+        <test-method signature="TestPlaceOrder()[pri:2, instance:Altex.tests.TestSauceDemoPage@6156496]" started-at="2022-05-20T09:15:31 EEST" name="TestPlaceOrder" finished-at="2022-05-20T09:15:34 EEST" duration-ms="3395" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestPlaceOrder -->
+        <test-method is-config="true" signature="close()[pri:0, instance:Altex.tests.TestSauceDemoPage@6156496]" started-at="2022-05-20T09:15:34 EEST" name="close" finished-at="2022-05-20T09:15:35 EEST" duration-ms="379" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- Altex.tests.TestSauceDemoPage -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

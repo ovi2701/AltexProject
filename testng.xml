@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"><suite name="All Test Suite"><test verbose="2" preserve-order="true" name="C:/APPS/Selenium_MAVEN_Projects/AltexProject"><classes><class name="Altex.tests.TestSauceDemoPage"><methods><include name="TestLogin"/><include name="TestAddingProductsAndViewCart"/><include name="TestPlaceOrder"/></methods></class></classes></test></suite>
